@@ -1,0 +1,16 @@
+<article class="post">
+  <div class="title card-header">
+    <a href="{{post_url}}" target="_blank">{{title}}</a>
+    <span>({{format_url post_url}})</span>
+    on
+    {{format_date created_at}}
+  </div>
+  <div class="meta card-body">
+    |{{vote_count}}
+    {{format_plural "point" vote_count}}
+    by
+    {{user.username}}|
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
+  </div>
+</article>
